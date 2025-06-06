@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+body {
+  font-family: "Roboto"
+}
+
+@theme {
+   
+
+
+}
+@utility container {
+
+  @variant max-sm {
+    padding-inline: 1rem;
+    margin-inline: auto;
+
+  }
+    @variant sm {
+      padding-inline: 2rem;
+      margin-inline: auto;
+
+    }
+    @variant md {
+        padding-inline: 3rem;
+        margin-inline: auto;
+
+      }
+    
+    @variant lg {
+      padding-inline: 4rem;
+      margin-inline: auto;
+
+    }
+    @variant xl {
+      padding-inline: 5rem;
+      margin-inline: auto;
+
+    }
+    
+    @variant 2xl {
+        padding-inline: 6rem;
+        margin-inline: auto;
+
+      }
+  }
