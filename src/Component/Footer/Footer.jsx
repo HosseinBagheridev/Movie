@@ -1,4 +1,5 @@
 import React from 'react'
+import { FollowUs } from './FollowUs'
 import { Link } from 'react-router-dom'
 
 export const Footer = () => {
@@ -71,7 +72,11 @@ export const Footer = () => {
         </div>
         
     </div>
+    <div>
+    <FollowUs />
     </div>
+    </div>
+
     
   )
 }

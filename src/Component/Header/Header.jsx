@@ -1,7 +1,7 @@
 import React, { use, useState } from 'react'
 import { Navigation } from '../Navigation/Navigation'
 import { Searchbar } from './Searchbar'
-import { FollowUs } from './FollowUs'
+import { FollowUs } from '../Footer/FollowUs'
 import HeaderSwiper from './HeaderSwiper'
 import { useLocation } from 'react-router-dom'
 
@@ -28,7 +28,6 @@ export const Header = ({ bgImage, setBgImage }) => {
       {location.pathname === '/' && <Searchbar />}
       {location.pathname == '/' && (
         <div className= {`${location.pathname !== '/' ? 'hidden' : ''}`}>
-        <FollowUs />
         <HeaderSwiper setBgImage={setBgImage}/>
         </div>
 
