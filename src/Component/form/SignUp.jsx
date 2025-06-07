@@ -8,7 +8,7 @@ export const SignUp = ({
     showConfirmPassword = true,
     
 }) => {
-    const buttonText = mode === "login" ? "log in to your IFIM account" : "create your IFIM account";
+    const buttonText = mode === "login" ? "log in to your MyFlix account" : "create your IFIM account";
     const title = mode === "login" ? "Login" : "Create account";
     const [formData, setFormData] = useState({
     username: "",

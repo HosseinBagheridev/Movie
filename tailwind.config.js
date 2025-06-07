@@ -1,5 +1,5 @@
 module.exports = {
-  darkMode: ['class', 'body'], // اینجا 'body' اضافه شده
+  darkMode: 'class', // اینجا 'body' اضافه شده
   theme: {
     extend: {},
   },

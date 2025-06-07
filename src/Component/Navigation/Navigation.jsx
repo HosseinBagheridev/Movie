@@ -5,13 +5,13 @@ export const Navigation = () => {
   const[OpenMenu , setOpenMenu] = useState(false)
   const [darkMode, setDarkMode] = useState(false);
 
-useEffect(() => {
+  useEffect(() => {
   if (darkMode) {
     document.documentElement.classList.add("dark");
   } else {
     document.documentElement.classList.remove("dark");
   }
-}, [darkMode]);
+  }, [darkMode]);
 
   return (
     <div className='py-2 bg-slate-800'>
@@ -20,7 +20,7 @@ useEffect(() => {
             <Link className='text-3xl ' to='/'>MyFlix </Link>
             <ul className='hidden gap-4 ml-10 md:flex md:text-sm lg:ml-20 lg:text-lg'>
                 <li className="relative group text-white uppercase cursor-pointer">
-                  <li className="hover:text-slate-400 transition">TV Shows</li>
+                  <span className="hover:text-slate-400 transition">TV Shows</span>
 
                   <ul className="absolute hidden group-hover:flex flex-col lg:text-sm bg-slate-600 rounded-md shadow-md top-full mt-.5 z-10 min-w-[160px] ">
                       <li className="px-4 py-2 hover:bg-slate-700" onClick={() => {
