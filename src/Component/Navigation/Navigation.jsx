@@ -11,10 +11,27 @@ export const Navigation = () => {
         <div className='flex items-center'>
             <Link className='text-3xl ' to='/'>ifilm</Link>
             <ul className='hidden gap-5 ml-15 md:flex md:text-sm lg:ml-25 lg:text-lg'>
-                <li><Link to="/genres">Genres</Link></li>
-                <li><Link to="/tvshows">tv shows</Link></li>
-                <li><Link to="/people">people</Link></li>
-                <li><Link to="/about">about</Link></li>
+                <li className="relative group text-white uppercase cursor-pointer">
+                  <li className="hover:text-slate-400 transition">TV Shows</li>
+
+                  <ul className="absolute hidden group-hover:flex flex-col lg:text-sm bg-slate-600 rounded-md shadow-md top-full mt-.5 z-10 min-w-[160px] ">
+                      <li className="px-4 py-2 hover:bg-slate-700" onClick={() => {
+                        document.getElementById("Trending-tv")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                        }}
+                      >
+                      Trending
+                      </li>
+                      <li className="px-4 py-2 hover:bg-slate-700" onClick={() => {
+                        document.getElementById("top-rated-tv")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                        }}
+                      >
+                      Top Rated
+                      </li>
+                  </ul>
+                </li>
+                <li className="hover:text-slate-400 transition"><Link to="/people">people</Link></li>
+                <li className="hover:text-slate-400 transition"><Link  to="/genres">Genres</Link></li>
+                <li className="hover:text-slate-400 transition"><Link to="/about">about</Link></li>
             </ul>
         </div>
         <div className='hidden gap-3 md:flex md:ml-auto md:text-sm lg:text-lg'>

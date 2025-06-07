@@ -10,6 +10,7 @@ export const MainSwiper = ({
   apiPath = "/trending/all/day",
   title = "Trending",
   showTimeTabs = true,
+  id ,
 }) => {
   const [timeWindow, setTimeWindow] = useState("day");
   const [currentApiPath, setCurrentApiPath] = useState(apiPath);
@@ -21,7 +22,7 @@ export const MainSwiper = ({
   }, [timeWindow, title]);
 
   return (
-    <div className="mt-8 w-full">
+    <div id= {id} className="mt-8 w-full">
       <div className="bg-slate-800 py-5">
         <div className="container flex items-center gap-10 md:gap-15">
           <h2 className="text-2xl text-white ">{title}</h2>

@@ -12,8 +12,8 @@ export const Main = ({ setBgImage }) => {
       backgroundSize: "cover",
       backgroundPosition: "center",
     }}>
-        <MainSwiper showTimeTabs={true} setBgImage={setBgImage}/>
-        <MainSwiper apiPath="/movie/top_rated" title='Top Rated Movies' showTimeTabs={false} setBgImage={setBgImage}/>
+        <MainSwiper id = "Trending-tv" showTimeTabs={true} setBgImage={setBgImage}/>
+        <MainSwiper  id="top-rated-tv" apiPath="/movie/top_rated" title='Top Rated Movies' showTimeTabs={false} setBgImage={setBgImage}/>
     </div>
   )
 }
