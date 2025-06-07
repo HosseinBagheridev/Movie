@@ -29,13 +29,13 @@ export const MainSwiper = ({
           {showTimeTabs && (
             <div className="text-sm md:text-sm lg:text-lg flex items-center gap-4 border-1 border-white  rounded-2xl">
               <p
-                className={`text-white cursor-pointer px-4 py-0.5 ${timeWindow === "day" ? "font-bold bg-slate-400 rounded-2xl" : ""}`}
+                className={`text-white cursor-pointer px-4 py-0.5 ${timeWindow === "day" ? "font-bold bg-slate-600 rounded-2xl" : ""}`}
                 onClick={() => setTimeWindow("day")}
               >
                 Today
               </p>
               <p
-                className={`text-white cursor-pointer px-4 py-0.5 ${timeWindow === "week" ? "font-bold bg-slate-400 rounded-2xl" : ""}`}
+                className={`text-white cursor-pointer px-4 py-0.5 ${timeWindow === "week" ? "font-bold bg-slate-600 rounded-2xl" : ""}`}
                 onClick={() => setTimeWindow("week")}
               >
                 This Week

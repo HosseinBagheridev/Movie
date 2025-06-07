@@ -1,16 +1,24 @@
-import React, { useState } from 'react'
+import React, { useEffect , useState } from 'react'
 import { Link } from 'react-router-dom';
 
 export const Navigation = () => {
   const[OpenMenu , setOpenMenu] = useState(false)
-  
+  const [darkMode, setDarkMode] = useState(false);
+
+useEffect(() => {
+  if (darkMode) {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
+}, [darkMode]);
 
   return (
     <div className='py-2 bg-slate-800'>
       <nav className='container flex items-center justify-between uppercase py-2 text-teal-50'>
         <div className='flex items-center'>
-            <Link className='text-3xl ' to='/'>ifilm</Link>
-            <ul className='hidden gap-5 ml-15 md:flex md:text-sm lg:ml-25 lg:text-lg'>
+            <Link className='text-3xl ' to='/'>MyFlix </Link>
+            <ul className='hidden gap-4 ml-10 md:flex md:text-sm lg:ml-20 lg:text-lg'>
                 <li className="relative group text-white uppercase cursor-pointer">
                   <li className="hover:text-slate-400 transition">TV Shows</li>
 
@@ -31,9 +39,12 @@ export const Navigation = () => {
                 </li>
                 <li className="hover:text-slate-400 transition"><Link to="/people">people</Link></li>
                 <li className="hover:text-slate-400 transition"><Link  to="/genres">Genres</Link></li>
-                <li className="hover:text-slate-400 transition"><Link to="/about">about</Link></li>
+                <li className="hover:text-slate-400 transition mr-5"><Link to="/about">About</Link></li>
             </ul>
         </div>
+        <div onClick={() => setDarkMode(!darkMode)} className={`w-10 h-5 lg:w-12 lg:h-6 rounded-full cursor-pointer lg:ml-10 flex items-center transition-colors duration-300 ${darkMode ? "bg-gray-700" : "bg-gray-300"}`}>
+                <div className={`w-4 lg:w-5 h-4 lg:h-5 bg-white rounded-full shadow-md transform transition-transform duration-300 ${darkMode ? "translate-x-6" : "translate-x-0"}`}/>
+              </div>
         <div className='hidden gap-3 md:flex md:ml-auto md:text-sm lg:text-lg'>
             <Link className='px-5 py-1 rounded-xl bg-slate-600' to="/login">login</Link>
             <Link className='px-5 py-1 rounded-xl bg-slate-600' to="/signup">sign up</Link>
@@ -49,10 +60,10 @@ export const Navigation = () => {
     </nav>
     <div className=" md:hidden">
       <ul className={OpenMenu ?  'flex flex-col gap-3 justify-center items-center mt-5 text-xl text-white uppercase border-t-2 pt-3 border-slate-600' : 'hidden'}>
-                <li><Link to="/movies">movies</Link></li>
-                <li><Link to="/tvshows">tv shows</Link></li>
-                <li><Link to="/people">people</Link></li>
-                <li><Link to="/more">more</Link></li>
+                <li><Link to="/tvshows">Tv Shows</Link></li>
+                <li><Link to="/people">People</Link></li>
+                <li><Link to="/genres">Genres</Link></li>
+                <li><Link to="/about">About</Link></li>
       </ul>
       <div className={OpenMenu ?  'flex gap-3 justify-center items-center mt-3 text-xl text-white uppercase border-t-2 pt-3 border-slate-600': 'hidden'}>
             <Link className='px-5 py-1 rounded-xl bg-sky-400' to="#">login</Link>
@@ -60,5 +71,6 @@ export const Navigation = () => {
       </div>
     </div>
     </div>
+    
   )
 }

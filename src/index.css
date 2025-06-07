@@ -2,14 +2,18 @@
 @import "tailwindcss";
 
 body {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
   font-family: "Roboto"
-}
-
-@theme {
-   
-
 
 }
+
+html.dark body {
+  background-color: black;
+  color: white;
+}
+
 @utility container {
 
   @variant max-sm {
