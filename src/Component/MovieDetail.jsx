@@ -29,7 +29,7 @@ function MovieDetail() {
   return (
     <div className=" px-6 py-10">
       <div
-        className="relative w-full h-[500px] rounded-lg overflow-hidden "
+        className="relative w-full lg:h-[500px] rounded-lg overflow-hidden "
         style={{
           backgroundImage: `url(${imageBaseURL}w1280${item.backdrop_path})`,
           backgroundSize: 'cover',
@@ -44,7 +44,7 @@ function MovieDetail() {
           className="shadow-lg w-full max-w-xs p-5 z-1 rounded-3xl "
         />
 
-        <div className="flex-1  z-1 pt-10">
+        <div className="flex-1  z-1 px-5 py-5">
           {item.tagline && <p className=" text-white mb-4">"{item.tagline}"</p>}
           <p className="mb-6 text-xl text-white">{item.overview}</p>
 

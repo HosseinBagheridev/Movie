@@ -66,8 +66,8 @@ export const Navigation = () => {
                 <li><Link to="/about">About</Link></li>
       </ul>
       <div className={OpenMenu ?  'flex gap-3 justify-center items-center mt-3 text-xl text-white uppercase border-t-2 pt-3 border-slate-600': 'hidden'}>
-            <Link className='px-5 py-1 rounded-xl bg-sky-400' to="#">login</Link>
-            <Link className='px-5 py-1 rounded-xl bg-sky-400' to="#">sign up</Link>
+            <Link className='px-5 py-1 rounded-xl bg-slate-600' to="/login">login</Link>
+            <Link className='px-5 py-1 rounded-xl bg-slate-600' to="/signup">sign up</Link>
       </div>
     </div>
     </div>
