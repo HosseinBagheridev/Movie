@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 
 export const Footer = () => {
   return (
-    <div className='bg-slate-800 mt-5 pt-10 pb-10'>
+    <div className='bg-slate-800 mt-5 py-10'>
         <div className='container grid justify-center'>
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-x-15 gap-y-5 text-md text-black '>
+        <div className='grid grid-cols-2 md:grid-cols-4 gap-x-15 gap-y-5 text-md text-white '>
             <ul className='flex flex-col gap-y-2'>
             <li className='text-xl font-extrabold'>
                 <Link>The Basics</Link>

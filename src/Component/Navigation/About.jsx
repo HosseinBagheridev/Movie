@@ -29,7 +29,7 @@ export const About = () => {
         <h2 className="text-xl font-semibold mb-2">Developer</h2>
         <p className="mb-2">👨‍💻 Hossein Bagheri</p>
         <p className="mb-2">
-          Email: <a href="mailto:HosseinBagheri.dev@gmail.com" className="text-blue-400 underline">HosseinBagheri.dev@gmail.com</a>
+          Email: <a href="mailto:HosseinBagheri.dev@gmail.com" className="text-blue-500 underline">HosseinBagheri.dev@gmail.com</a>
         </p>
         <p className="mb-2">
           Telegram:{" "}
